@@ -4,13 +4,14 @@ pipeline {
     stage('Setup') {
       steps {
         sh '''chmod +x ./scripts/docker-setup.sh
-'''
+sh ./scripts/docker-setup.sh'''
       }
     }
 
     stage('Clean') {
       steps {
-        sh 'chmod +x ./scripts/docker-clean.sh'
+        sh '''chmod +x ./scripts/docker-clean.sh
+sh ./scripts/docker-clean.sh'''
       }
     }
 
