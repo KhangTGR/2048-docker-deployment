@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh './scripts/setup.sh'
+        sh '''sudo su
+./scripts/setup.sh'''
       }
     }
 
