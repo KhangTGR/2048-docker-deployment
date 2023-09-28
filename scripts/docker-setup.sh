@@ -5,4 +5,4 @@ cd dockerfiles
 docker build -t docker-2048-gameserver-image:latest - <2048Game.Dockerfile
 
 # Run 2048 game in Docker container
-docker run -d -p 80:80 docker-2048-gameserver-image:latest --name docker-2048-gameserver-container
+docker run --name docker-2048-gameserver-container -d -p 80:80 docker-2048-gameserver-image:latest

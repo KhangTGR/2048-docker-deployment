@@ -12,6 +12,5 @@ docker run --name docker-2048-gameserver-container -d -p 80:80 docker-2048-games
 '''
       }
     }
-
   }
 }
