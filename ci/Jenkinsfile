@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh '''../scripts/docker-setup.sh
+        sh '''./scripts/docker-setup.sh
 '''
       }
     }
 
     stage('Clean') {
       steps {
-        sh '../scripts/docker-clean.sh'
+        sh './scripts/docker-clean.sh'
       }
     }
 
