@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh './scripts/docker-setup.sh'
+        sh './scripts/setup.sh'
       }
     }
 
