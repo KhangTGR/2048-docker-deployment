@@ -21,7 +21,9 @@ sh ./scripts/docker-clean.sh'''
           image 'hashicorp/terraform:latest'
           args '--entrypoint='
         }
-
+      }
+      steps {
+        sh '''ls'''
       }
     }
 
