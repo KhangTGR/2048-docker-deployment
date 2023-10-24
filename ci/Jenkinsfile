@@ -16,6 +16,12 @@ sh ./scripts/docker-clean.sh'''
     }
 
     stage('Initial') {
+      agent {
+        docker {
+          image 'hashicorp/terraform:light'
+        }
+
+      }
       steps {
         sh 'terraform version'
       }
