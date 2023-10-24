@@ -23,5 +23,11 @@ sh ./scripts/app-source-zip.sh'''
       }
     }
 
+    stage('Update GitHub') {
+      steps {
+        git(url: 'https://github.com/KhangTGR/game-docker-deployment', branch: 'main', changelog: true)
+      }
+    }
+
   }
 }
