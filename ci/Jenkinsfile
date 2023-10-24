@@ -17,9 +17,7 @@ sh ./scripts/docker-clean.sh'''
 
     stage('Initial') {
       steps {
-        sh '''chmod +x ./scripts/terraform-setup.sh
-sh ./scripts/terraform-setup.sh
-'''
+        sh 'sh \'terraform init\''
       }
     }
 
