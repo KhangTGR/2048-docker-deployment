@@ -1,29 +1,25 @@
 pipeline {
   agent any
   stages {
-    stage('Setup') {
+    stage('Build & Test App') {
       steps {
         sh '''chmod +x ./scripts/docker-setup.sh
 sh ./scripts/docker-setup.sh'''
       }
     }
 
-    stage('Clean') {
+    stage('Clean App') {
       steps {
         sh '''chmod +x ./scripts/docker-clean.sh
 sh ./scripts/docker-clean.sh'''
       }
     }
 
-    stage('Initial') {
-      agent {
-        docker {
-          image 'hashicorp/terraform:latest'
-          args '--entrypoint='
-        }
-      }
+    stage('Zip App') {
+      agent any
       steps {
-        sh '''ls'''
+        sh '''chmod +x ./scripts/app-source-zip.sh
+sh ./scripts/app-source-zip.sh'''
       }
     }
 
