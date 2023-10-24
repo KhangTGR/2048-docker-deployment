@@ -17,7 +17,7 @@ sh ./scripts/docker-clean.sh'''
 
     stage('Initial') {
       steps {
-        sh 'sh \'terraform init\''
+        sh 'terraform init'
       }
     }
 
