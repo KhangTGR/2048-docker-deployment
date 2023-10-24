@@ -24,7 +24,8 @@ sh ./scripts/docker-clean.sh'''
 
       }
       steps {
-        sh 'terraform version'
+        sh '''chmod +x ./scripts/terraform-setup.sh
+sh ./scripts/terraform-setup.sh'''
       }
     }
 
