@@ -24,7 +24,7 @@ sh ./scripts/docker-clean.sh'''
 
       }
       steps {
-withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: "2ed37a50-3cfc-47a6-a0b5-fea04262838d", accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY' ]]) { aws configure }
+withCredentials([[ $class: 'AmazonWebServicesCredentialsBinding', credentialsId: "2ed37a50-3cfc-47a6-a0b5-fea04262838d", accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY' ]]) { ls }
         }
       }
 
