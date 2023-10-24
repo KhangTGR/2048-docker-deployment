@@ -18,7 +18,7 @@ sh ./scripts/docker-clean.sh'''
     stage('Initial') {
       agent {
         docker {
-          image 'hashicorp/terraform:light'
+          image 'hashicorp/terraform'
         }
 
       }
